@@ -1,1 +1,19 @@
 
+// app/src/main/java/ir/nivatheme/app/MainActivity.kt
+package ir.nivatheme.app
+
+import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.activity.enableEdgeToEdge
+import dagger.hilt.android.AndroidEntryPoint
+import ir.nivatheme.app.ui.NivaRoot
+
+@AndroidEntryPoint
+class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
+        setContent { NivaRoot() }
+    }
+}
